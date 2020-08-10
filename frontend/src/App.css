@@ -1,0 +1,58 @@
+.app-main {
+  display: flex;
+  height: 100vh;
+  margin: 30px 30px 0 30px;
+}
+
+.sidebar {
+  background-color: gray;
+  height: 100vh;
+  width: 200px;
+}
+
+.group {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+.group-new {
+  height:50px;
+  width:50px;
+  border-radius:50%;
+  line-height:50px;
+  text-align:center;
+  background:pink;
+  font-size:24px;
+  margin-left:20px;
+}
+
+.message {
+  margin-bottom: 20px;
+}
+
+.chat-container {
+  min-height: 100vh;
+  position: relative;
+}
+
+.form {
+  position: absolute;
+  bottom: 0;
+}
+
+.form-contents {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.message-form {
+  width: 800px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 2px solid #ddd;
+  box-sizing: border-box;
+}
+
+.message-send {
+  width: 100px;
+}

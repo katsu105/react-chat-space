@@ -1,6 +1,7 @@
 import React from 'react'
-import SideBar from './SideBar'
 import axios from 'axios'
+import SideBar from './SideBar'
+import ChatContainer from './ChatContainer'
 
 class MainContainer extends React.Component {
   constructor(props) {
@@ -13,17 +14,18 @@ class MainContainer extends React.Component {
   componentDidMount() {
     axios.get('http://localhost:3001/api/groups')
       .then((results) => {
-        console.log(results)
+        // console.log(results)
         this.setState({groups: results.data})
       })
       .catch((data) =>{
-        console.log(data)
+        // console.log(data)
       })
     }
     render() {
       return (
         <div className='app-main'>
           <SideBar groupsData={this.state.groups} />
+          <ChatContainer />
         </div>
       );
     }
