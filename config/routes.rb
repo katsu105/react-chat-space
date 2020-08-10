@@ -1,3 +1,13 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: 'groups#index'
+  resources :groups, only: [:index, :new, :show]
+
+  namespace :api do
+    resources :groups, only: [:index, :show] do
+      member do
+        get :fetch_group_name
+      end
+      resources :messages, only: [:index, :create]
+    end
+  end
 end
